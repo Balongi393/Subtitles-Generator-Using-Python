@@ -3,7 +3,12 @@ import time
 import speech_recognition as sr
 from os import path
 #Inserting Audio File
-AUDIO_FILE = path.join("english.wav")
+# Folder path
+folder_path = "E:/offroadland GIT/Subtitles-Generator-Using-Python/AI semester Project/Dataset (Audios)"
+# Audio file name
+audio_file_name = "movie.wav"
+# Complete audio file path
+AUDIO_FILE = path.join(folder_path, audio_file_name)
 #Setting recognizer
 r = sr.Recognizer()
 #Start Time for termination purpose
@@ -50,7 +55,7 @@ def audio_to_srt(current_time, block):
 
 
             #Writing on File
-            with open(r"C:\Users\Adeel Khan\PycharmProjects\Subtitle_Generation_AI\subtitles.srt", "a") as f:
+            with open(r"E:\offroadland GIT\Subtitles-Generator-Using-Python\AI semester Project\Code\subtitles.srt", "a") as f:
                 f.write(block_str)
                 f.write("\n")
                 f.write(str_current_time)
